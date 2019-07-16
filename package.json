@@ -1,0 +1,35 @@
+{
+  "name": "contact-keeper-react-with-backend",
+  "version": "1.0.0",
+  "description": "Contact Manager App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maciejszuba/contact-keeper-react-with-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maciejszuba/contact-keeper-react-with-backend/issues"
+  },
+  "homepage": "https://github.com/maciejszuba/contact-keeper-react-with-backend#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.1.0",
+    "eslint": "^6.0.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.2"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "nodemine": "^0.1.0",
+    "nodemon": "^1.19.1"
+  }
+}
