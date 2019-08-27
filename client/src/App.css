@@ -320,6 +320,11 @@ input {
   color: #888;
 }
 
+.form-container {
+  width: 30vw;
+  margin: auto;
+}
+
 input[type='text'],
 input[type='email'],
 input[type='password'],
