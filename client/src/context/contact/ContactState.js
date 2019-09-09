@@ -11,6 +11,7 @@ import {
     FILTER_CONTACT,
     CLEAR_FILTER
 } from '../types'
+import portrait from '../../img/portrait.png'
 
 const ContactState = props => {
     const initialState = {
@@ -20,19 +21,29 @@ const ContactState = props => {
                 name: 'Bgogusia',
                 email: 'bogusia@gmmm.com',
                 phone: '525425242',
-                type: 'personal'
+                type: 'personal',
+                img: {portrait}
             }, {
                 id: 2,
                 name: 'Gićka',
                 email: 'gicka@ffafa.com',
                 phone: '520098242',
-                type: 'personal'
+                type: 'personal',
+                img: 'uri(../../img/portrait.png)'
             }, {
                 id: 3,
                 name: 'Wisia',
                 email: 'wisia@uuuro.com',
                 phone: '20473198242',
-                type: 'professional'
+                type: 'professional',
+                img: '../../img/portrait.png'
+            }, {
+                id: 4,
+                name: 'Wisia',
+                email: 'wisia@uuuro.com',
+                phone: '20473198242',
+                type: 'professional',
+                img: '../../img/portrait.png'
             }
         ],
         current: null,

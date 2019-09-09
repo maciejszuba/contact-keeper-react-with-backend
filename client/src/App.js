@@ -10,9 +10,12 @@ import About from './components/pages/About'
 import Register from './components/auth/Register'
 import Login from './components/auth/Login'
 import Alerts from './components/layout/Alerts'
+import setAuthToken from './utils/setAuthToken'
 
 
 const App = () => {
+
+localStorage.token && setAuthToken(localStorage.token);
 
   return (
     <AuthState>

@@ -19,7 +19,7 @@ const Login = () => {
     }
 
     return (
-       <div className="form-container">
+       <div className="form-container translucent">
            <h1>
                Account <span className="text-primary">Login</span>
                </h1>

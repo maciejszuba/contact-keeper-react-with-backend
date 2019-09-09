@@ -1,12 +1,23 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import AlertContext from '../../context/alert/AlertContext'
 import AuthContext from '../../context/auth/AuthContext'
 
-const Register = () => {
+const Register = (props) => {
     const alertContext = useContext(AlertContext);
     const authContext = useContext(AuthContext);
     const { setAlert } = alertContext;
-    const { register } = authContext;
+    const { register, error, clearErrors, isAuth } = authContext;
+
+    useEffect(() => {
+
+        isAuth && props.history.push('/');
+
+        if(error === 'User already exists') {
+            setAlert(error, 'danger');
+            clearErrors();
+        }
+        //eslint-disable-next-line
+    }, [error, isAuth, props.history])
 
     const [user, setUser] = useState({
         name: '',
@@ -36,7 +47,7 @@ const Register = () => {
     }
 
     return (
-        <div className="form-container">
+        <div className="form-container translucent">
             <h1>
                 Account <span className='text-primary'>Register</span>
             </h1>
