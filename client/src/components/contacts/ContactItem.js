@@ -1,6 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import ContactContext from '../../context/contact/contactContext'
+import defaultImg from '../../img/default_portrait.svg'
 
 
 const ContactItem = ({ contact }) => {
@@ -21,12 +22,17 @@ const ContactItem = ({ contact }) => {
         }
     }
 
+    useEffect(() =>{
+        console.log(img);
+        console.log(defaultImg);
+    })
+
     return (
         <div className='card'>
             <h3 className="text-left">
                 {name}{'  '}
                 <div className='picture-and-type'>
-                    <img src={img} alt={name}/>
+                    <img src={img ? {img} : {defaultImg}} alt={name}/>
                     <span                        
                         className={'badge ' + (type === 'professional' ?
                             'badge-success' : 'badge-primary')}>

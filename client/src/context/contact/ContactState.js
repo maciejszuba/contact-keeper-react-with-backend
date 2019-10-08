@@ -13,6 +13,9 @@ import {
 } from '../types'
 import portrait from '../../img/portrait.png'
 
+let portret = portrait;
+console.log(portrait);
+
 const ContactState = props => {
     const initialState = {
         contacts: [
@@ -22,7 +25,7 @@ const ContactState = props => {
                 email: 'bogusia@gmmm.com',
                 phone: '525425242',
                 type: 'personal',
-                img: {portrait}
+                img: portret
             }, {
                 id: 2,
                 name: 'Gićka',
@@ -36,7 +39,7 @@ const ContactState = props => {
                 email: 'wisia@uuuro.com',
                 phone: '20473198242',
                 type: 'professional',
-                img: '../../img/portrait.png'
+                img: require('../../img/portrait.png')
             }, {
                 id: 4,
                 name: 'Wisia',
